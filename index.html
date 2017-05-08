@@ -10,14 +10,19 @@
 </head>
 <body>
   <div id="app">
-    <h1>Two way data binding</h1>
-    <label for="name">Name</label>
-    <input type="text" v-model="name">
-    <span>{{name}}</span>
-    <br>
-    <label for="name">Age</label>
-    <input type="text" v-model="age">
-    <span>{{age}}</span>
+    <h1>Dynamic CSS Class</h1>
+    <h2>Example 1</h2>
+    <!-- <div v-bind:class="{available: available}">
+      <span>Patrick</span>
+    </div> -->
+
+    <h2>Example 2</h2>
+
+    <div v-bind:class="compClasses">
+      <span>Patrick</span>
+    </div>
+    <button v-on:click="nearby = !nearby">Toggle Nearby</button>
+    <button v-on:click="available = !available">Toggle Available</button>
   </div>
   <script src="app.js" charset="utf-8">Website</script>
 </body>
