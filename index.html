@@ -10,18 +10,21 @@
 </head>
 <body>
   <div id="app">
-    <h1>If loops</h1>
-    <ul>
-      <li v-for="character in characters">
-        {{character}}
-      </li>
-    </ul>
-    <ul>
-      <li v-for="ninja in ninjas">
-        {{ninja.name}} whos age is {{ninja.age}}
-      </li>
-    </ul>
+    <!-- Bag image -->
+    <div id="bag" v-bind:class="{burst: ended}">
+
+    </div>
+    <!-- Bag health -->
+    <div id="bag-health">
+      <div v-bind:style="{width: health + '%'}"></div>
+    </div>
+    <!-- Game controls -->
+    <div id="controls">
+      <button v-on:click="punch" v-show="!ended">Punch</button>
+      <button v-on:click="restart">Restart</button>
+    </div>
+
   </div>
-  <script src="app.js" charset="utf-8">Website</script>
+  <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
