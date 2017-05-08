@@ -1,31 +1,13 @@
 var one = new Vue({
   el: '#app-one',
   data: {
-    title: 'Vue App One'
+      output: 'Waiting for name...'
     },
   methods:{
-
-  },
-  computed:{
-    greet: function(){
-      return 'Hello from App one'
+    readRefs: function(){
+      console.log(this.$refs.name.value);
+      this.output = this.$refs.name.value;
     }
   }
-});
 
-var two = new Vue({
-  el: '#app-two',
-  data: {
-    title: 'Vue App Two'
-    },
-  methods:{
-    changeTitle:function(){
-      this.title = "Hello guyz";
-    }
-  },
-  computed:{
-    greet: function(){
-      return 'Hello from App Two'
-    }
-  }
 });
