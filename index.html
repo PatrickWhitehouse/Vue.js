@@ -9,18 +9,16 @@
   <script src="https://unpkg.com/vue" charset="utf-8"></script>
 </head>
 <body>
-  <div id="app">
-    <h1>If loops</h1>
-    <ul>
-      <li v-for="character in characters">
-        {{character}}
-      </li>
-    </ul>
-    <ul>
-      <li v-for="ninja in ninjas">
-        {{ninja.name}} whos age is {{ninja.age}}
-      </li>
-    </ul>
+
+  <div id="app-one">
+    <h1>{{title}}</h1>
+    <p>{{greet}}</p>
+  </div>
+
+  <div id="app-two">
+    <h1>{{title}}</h1>
+    <p>{{greet}}</p>
+    <button v-on:click="changeTitle">Change app one title</button>
   </div>
   <script src="app.js" charset="utf-8">Website</script>
 </body>

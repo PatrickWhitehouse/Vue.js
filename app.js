@@ -1,18 +1,31 @@
-new Vue({
-  el: '#app',
+var one = new Vue({
+  el: '#app-one',
   data: {
-        characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
-        ninjas: [
-            { name: 'Ryu', age: 25 },
-            { name: 'Yoshi', age: 35 },
-            { name: 'Ken', age: 55 },
-            {name: 'Patrick', age: 21}
-        ]
+    title: 'Vue App One'
     },
   methods:{
 
   },
   computed:{
+    greet: function(){
+      return 'Hello from App one'
+    }
+  }
+});
 
+var two = new Vue({
+  el: '#app-two',
+  data: {
+    title: 'Vue App Two'
+    },
+  methods:{
+    changeTitle:function(){
+      this.title = "Hello guyz";
+    }
+  },
+  computed:{
+    greet: function(){
+      return 'Hello from App Two'
+    }
   }
 });
