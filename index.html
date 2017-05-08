@@ -10,19 +10,15 @@
 </head>
 <body>
   <div id="app">
-    <h1>Dynamic CSS Class</h1>
-    <h2>Example 1</h2>
-    <!-- <div v-bind:class="{available: available}">
-      <span>Patrick</span>
-    </div> -->
-
-    <h2>Example 2</h2>
-
-    <div v-bind:class="compClasses">
-      <span>Patrick</span>
-    </div>
-    <button v-on:click="nearby = !nearby">Toggle Nearby</button>
-    <button v-on:click="available = !available">Toggle Available</button>
+    <h1>Conditional Errors</h1>
+    <button v-on:click="error=!error">Toggle Error</button>
+    <button v-on:click="success=!success">Toggle Success</button>
+    <p v-if="error">
+      Error has been toggled
+    </p>
+    <p v-else-if="success">
+      Success has been toggled
+    </p>
   </div>
   <script src="app.js" charset="utf-8">Website</script>
 </body>
