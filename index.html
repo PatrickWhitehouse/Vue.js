@@ -10,15 +10,17 @@
 </head>
 <body>
   <div id="app">
-    <h1>Conditional Errors</h1>
-    <button v-on:click="error=!error">Toggle Error</button>
-    <button v-on:click="success=!success">Toggle Success</button>
-    <p v-if="error">
-      Error has been toggled
-    </p>
-    <p v-else-if="success">
-      Success has been toggled
-    </p>
+    <h1>If loops</h1>
+    <ul>
+      <li v-for="character in characters">
+        {{character}}
+      </li>
+    </ul>
+    <ul>
+      <li v-for="ninja in ninjas">
+        {{ninja.name}} whos age is {{ninja.age}}
+      </li>
+    </ul>
   </div>
   <script src="app.js" charset="utf-8">Website</script>
 </body>
