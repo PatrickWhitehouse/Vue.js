@@ -1,13 +1,28 @@
 new Vue({
   el: '#app',
   data: {
-    name: 'Patrick',
-    job: 'Web developer',
-    website: 'https://patrickwhitehouse.pw'
+    age: 21
   },
   methods:{
-    greet: function(time){
-      return 'Good' +' '+time + ' ' + this.name;
+    add: function(inc){
+      this.age+=inc;
+    },
+    subtract: function(dec){
+      this.age-=dec;
+    }
+  }
+});
+
+new Vue({
+  el: '#canvas',
+  data: {
+    x:0,
+    y:0
+  },
+  methods:{
+    updatexy:function(event){
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     }
   }
 });
